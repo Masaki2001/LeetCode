@@ -11,12 +11,12 @@ class Solution:
             return None
 
         center = len(nums) // 2
-        leftCenter = nums[:center]
-        rightCenter = nums[center + 1:]
+        leftToCenter = nums[:center]
+        rightToCenter = nums[center + 1:]
 
         ans = TreeNode(nums[center])
-        ans.left = self.sortedArrayToBST(leftCenter)
-        ans.right = self.sortedArrayToBST(rightCenter)
+        ans.left = self.sortedArrayToBST(leftToCenter)
+        ans.right = self.sortedArrayToBST(rightToCenter)
 
         return ans
 
